@@ -1,5 +1,5 @@
 {% set name = "abess" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,28 +7,30 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 435096e3b7a6f271e2cc14b0b5e7b2d92889435594ecb3455dd4b35cb23cd26c
+  sha256: 9830fb70a2854faf233876eb81b27a3e7265533af682f9f8fe0d4e1de0293cb6
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - python
+    - cmake
     - llvm-openmp   # [osx]
     - libgomp       # [linux]
     - intel-openmp  # [win]
   host:
     - pip
     - python
-    - pybind11 >=2.6.0
     - numpy
+    -  "pybind11 >=2.6.0"
   run:
     - {{ pin_compatible('numpy') }}
-    - scipy
-    - scikit-learn >=0.24
+    - "scipy"
+    - "pandas"
+    - "scikit-learn >=0.24"
     - _openmp_mutex   # [linux]
     - libstdcxx-ng    # [linux]
     - libgcc-ng       # [linux]
