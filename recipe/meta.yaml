@@ -18,7 +18,7 @@ requirements:
     - {{ compiler('cxx') }}
     - python
     - cmake
-    - pybind11>=2.6.0
+    - pybind11 >=2.6.0
     - llvm-openmp   # [osx]
     - libgomp       # [linux]
     - intel-openmp  # [win]
@@ -28,9 +28,9 @@ requirements:
   run:
     - {{ pin_compatible('numpy') }}
     - "scipy"
-    - "numpy<1.24"
+    - "numpy <1.24"
     - "pandas"
-    - "scikit-learn>=0.24"
+    - "scikit-learn >=0.24"
     - _openmp_mutex   # [linux]
     - libstdcxx-ng    # [linux]
     - libgcc-ng       # [linux]
