@@ -25,9 +25,9 @@ requirements:
     - pip
     - python
     - numpy
+    -  "pybind11 >=2.6.0"
   run:
     - {{ pin_compatible('numpy') }}
-    - "pybind11 >=2.6.0"
     - "scipy"
     - "pandas"
     - "scikit-learn >=0.24"
