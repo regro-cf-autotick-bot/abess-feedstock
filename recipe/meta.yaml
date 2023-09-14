@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - python
+    - make
     - cmake
     - llvm-openmp   # [osx]
     - libgomp       # [linux]
@@ -24,8 +25,8 @@ requirements:
   host:
     - pip
     - python
-    - numpy
-    -  "pybind11 >=2.6.0"
+    - "numpy
+    - "pybind11 >=2.6.0"
   run:
     - {{ pin_compatible('numpy') }}
     - "scipy"
