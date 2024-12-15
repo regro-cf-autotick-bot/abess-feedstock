@@ -25,6 +25,7 @@ requirements:
     - intel-openmp  # [win]
   host:
     - pip
+    - setuptools
     - python
     - numpy
     - "pybind11 >=2.6.0"
@@ -33,11 +34,6 @@ requirements:
     - "scipy"
     - "pandas"
     - "scikit-learn >=0.24"
-    - _openmp_mutex   # [linux]
-    - libstdcxx-ng    # [linux]
-    - libgcc-ng       # [linux]
-    - libcxx          # [osx]
-    - vs2015_runtime  # [win]
     - python
 
 test:
