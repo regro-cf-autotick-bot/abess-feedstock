@@ -29,6 +29,7 @@ requirements:
     - python
     - numpy
     - pybind11 >=2.6.0
+    - pybind11-global
   run:
     - scipy
     - pandas
